@@ -112,6 +112,9 @@ Five archetypes are hand-tuned and clearly flagged in the UI:
 - **LLM:** `langchain-google-genai` (Gemini) and `langchain-groq` (Groq), with a deterministic rule-based fallback.
 - **Deployment:** a single FastAPI process serves the built frontend as static files at `/`, with the API under `/api/*`.
 
+<img width="3260" height="2302" alt="image" src="https://github.com/user-attachments/assets/b4f29b52-f438-4f92-8389-7e03180dd4f3" />
+
+
 See [`ARCHITECTURE.md`](ARCHITECTURE.md) for the full module map, state diagram, and mock adapter interfaces.
 
 ## API Reference (Key Endpoints)
