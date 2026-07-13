@@ -5,9 +5,9 @@ import type { CreateMsmeRequest, Archetype } from "../lib/types";
 
 // ─── tiny helpers ────────────────────────────────────────────────────────────
 
-function Label({ children }: { children: React.ReactNode }) {
+function Label({ children, htmlFor }: { children: React.ReactNode; htmlFor?: string }) {
   return (
-    <label className="block text-xs font-semibold uppercase tracking-wide text-[var(--color-ink-500)] mb-1">
+    <label htmlFor={htmlFor} className="block text-xs font-semibold uppercase tracking-wide text-[var(--color-ink-500)] mb-1">
       {children}
     </label>
   );
@@ -113,7 +113,7 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
 function FieldGroup({ label, id, children }: { label: string; id: string; children: React.ReactNode }) {
   return (
     <div>
-      <Label>{label}</Label>
+      <Label htmlFor={id}>{label}</Label>
       {children}
     </div>
   );

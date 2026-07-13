@@ -20,11 +20,11 @@ export function bandStyle(band: RiskBand): BandStyle {
 
 export function bandColorHex(band: RiskBand): string {
   const map: Record<RiskBand, string> = {
-    "High Risk": "#a4342a",
-    Bad: "#b5641f",
-    Average: "#9a7b0a",
-    Good: "#2b7a5b",
-    Excellent: "#146356",
+    "High Risk": "#ef4444",
+    Bad: "#f97316",
+    Average: "#eab308",
+    Good: "#22c55e",
+    Excellent: "#10b981",
   };
   return map[band];
 }

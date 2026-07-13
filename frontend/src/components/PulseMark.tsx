@@ -14,7 +14,7 @@ export function PulseMark({ size = 24, className = "", animate = false }: PulseM
       role="img"
       aria-label="PulseMSME AI"
     >
-      <rect width="32" height="32" rx="7" fill="var(--color-ink-900)" />
+      <rect width="32" height="32" rx="7" fill="#18181b" stroke="var(--color-border)" strokeWidth="1" />
       <path
         d="M3 17h5l2.5-8 4 15 3-11 2 4h9.5"
         fill="none"

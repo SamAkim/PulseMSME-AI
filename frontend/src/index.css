@@ -1,39 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Fraunces", ui-serif, Georgia, serif;
-  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, monospace;
 
-  --color-ink-950: #0b1220;
-  --color-ink-900: #101828;
-  --color-ink-800: #1c2937;
-  --color-ink-700: #2b3a4a;
-  --color-ink-500: #5b6472;
-  --color-ink-300: #9aa4b2;
+  --color-ink-950: #050505;
+  --color-ink-900: #fafafa;
+  --color-ink-800: #f4f4f5;
+  --color-ink-700: #e4e4e7;
+  --color-ink-500: #a1a1aa;
+  --color-ink-300: #52525b;
 
-  --color-surface: #f5f6f8;
-  --color-surface-raised: #ffffff;
-  --color-surface-sunken: #eceef2;
-  --color-border: #dde1e7;
+  --color-surface: #09090b;
+  --color-surface-raised: #18181b;
+  --color-surface-sunken: #0c0c0e;
+  --color-border: rgba(255, 255, 255, 0.08);
 
-  --color-brand-900: #0c352f;
-  --color-brand-700: #146356;
-  --color-brand-600: #197d6c;
-  --color-brand-500: #1f9683;
-  --color-brand-100: #dcf1ec;
+  --color-brand-900: #272111;
+  --color-brand-700: #786028;
+  --color-brand-600: #a38237;
+  --color-brand-500: #cca343;
+  --color-brand-100: #1b170c;
 
-  --color-band-excellent: #146356;
-  --color-band-excellent-bg: #e0f2ee;
-  --color-band-good: #2b7a5b;
-  --color-band-good-bg: #e3f3ea;
-  --color-band-average: #9a7b0a;
-  --color-band-average-bg: #faf3d9;
-  --color-band-bad: #b5641f;
-  --color-band-bad-bg: #fbe9dc;
-  --color-band-highrisk: #a4342a;
-  --color-band-highrisk-bg: #f8e2df;
+  --color-band-excellent: #10b981;
+  --color-band-excellent-bg: rgba(16, 185, 129, 0.1);
+  --color-band-good: #22c55e;
+  --color-band-good-bg: rgba(34, 197, 94, 0.1);
+  --color-band-average: #eab308;
+  --color-band-average-bg: rgba(234, 179, 8, 0.1);
+  --color-band-bad: #f97316;
+  --color-band-bad-bg: rgba(249, 115, 22, 0.1);
+  --color-band-highrisk: #ef4444;
+  --color-band-highrisk-bg: rgba(239, 68, 68, 0.1);
 }
 
 * {
@@ -42,7 +42,7 @@
 
 html {
   font-family: var(--font-sans);
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 body {
@@ -68,6 +68,7 @@ body {
 .font-display {
   font-family: var(--font-display);
   font-optical-sizing: auto;
+  letter-spacing: -0.02em;
 }
 
 .font-mono-data {
@@ -90,11 +91,38 @@ body {
   animation: pulse-trace 1.1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* CRED Card Hover Effect */
+.cred-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cred-card-hover:hover {
+  border-color: rgba(204, 163, 67, 0.3) !important;
+  box-shadow: 0 0 20px rgba(204, 163, 67, 0.05), inset 0 0 12px rgba(255, 255, 255, 0.02);
+  transform: translateY(-2px);
+}
+
 @media print {
   .no-print {
     display: none !important;
   }
   body {
-    background: white;
+    background: black;
   }
 }
+

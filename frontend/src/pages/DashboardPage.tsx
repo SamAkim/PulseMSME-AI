@@ -11,7 +11,7 @@ import { bandColorHex } from "../lib/riskBand";
 import type { RiskBand } from "../lib/types";
 
 const RISK_ORDER: RiskBand[] = ["High Risk", "Bad", "Average", "Good", "Excellent"];
-const SECTOR_COLORS = ["#146356", "#1f9683", "#5b6472", "#9a7b0a", "#b5641f", "#a4342a", "#2b7a5b", "#9aa4b2", "#0c352f", "#c2703d"];
+const SECTOR_COLORS = ["#cca343", "#786028", "#38bdf8", "#818cf8", "#fb7185", "#34d399", "#a1a1aa", "#f472b6", "#fbbf24", "#22d3ee"];
 
 export default function DashboardPage() {
   const [data, setData] = useState<DashboardMetrics | null>(null);
@@ -64,7 +64,7 @@ export default function DashboardPage() {
         </div>
         <Link
           to="/msme"
-          className="rounded-lg bg-[var(--color-brand-700)] px-4 py-2 text-sm font-medium text-white hover:bg-[var(--color-brand-900)]"
+          className="rounded-lg bg-[var(--color-brand-500)] px-4 py-2 text-sm font-semibold text-[var(--color-ink-950)] hover:bg-[var(--color-brand-600)] transition-colors shadow-sm"
         >
           Browse MSMEs
         </Link>

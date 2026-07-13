@@ -15,7 +15,7 @@ const TONE_CLASSES: Record<string, string> = {
 export function Card({ children, className = "", padded = true, tone = "default" }: CardProps) {
   return (
     <div
-      className={`rounded-xl border border-[var(--color-border)] shadow-sm ${TONE_CLASSES[tone]} ${
+      className={`rounded-xl border border-[var(--color-border)] shadow-sm cred-card-hover ${TONE_CLASSES[tone]} ${
         padded ? "p-5 sm:p-6" : ""
       } ${className}`}
     >

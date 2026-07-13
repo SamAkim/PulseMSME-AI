@@ -7,11 +7,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const VARIANTS: Record<string, string> = {
   primary:
-    "bg-[var(--color-brand-700)] text-white hover:bg-[var(--color-brand-900)] focus-visible:outline-[var(--color-brand-700)]",
+    "bg-[var(--color-brand-500)] text-[var(--color-ink-950)] font-semibold hover:bg-[var(--color-brand-600)] focus-visible:outline-[var(--color-brand-500)] shadow-sm shadow-[var(--color-brand-500)]/10",
   secondary:
-    "bg-white text-[var(--color-ink-900)] border border-[var(--color-border)] hover:bg-[var(--color-surface-sunken)] focus-visible:outline-[var(--color-brand-700)]",
+    "bg-transparent text-[var(--color-ink-900)] border border-[var(--color-border)] hover:bg-[var(--color-surface-raised)] focus-visible:outline-[var(--color-brand-500)]",
   ghost:
-    "bg-transparent text-[var(--color-ink-700)] hover:bg-[var(--color-surface-sunken)] focus-visible:outline-[var(--color-brand-700)]",
+    "bg-transparent text-[var(--color-ink-700)] hover:bg-[var(--color-surface-raised)]/50 focus-visible:outline-[var(--color-brand-500)]",
 };
 
 const SIZES: Record<string, string> = {
