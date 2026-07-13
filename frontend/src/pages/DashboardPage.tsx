@@ -102,7 +102,37 @@ export default function DashboardPage() {
           <div className="h-64">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
-                <Pie data={sectorData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={90} paddingAngle={1}>
+                <Pie
+                  data={sectorData}
+                  dataKey="value"
+                  nameKey="name"
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={75}
+                  paddingAngle={1}
+                  label={({ cx, cy, midAngle, outerRadius, name, value }) => {
+                    const RADIAN = Math.PI / 180;
+                    const radius = (outerRadius ?? 75) + 14;
+                    const angle = midAngle ?? 0;
+                    const cxVal = cx ?? 0;
+                    const cyVal = cy ?? 0;
+                    const x = cxVal + radius * Math.cos(-angle * RADIAN);
+                    const y = cyVal + radius * Math.sin(-angle * RADIAN);
+                    return (
+                      <text
+                        x={x}
+                        y={y}
+                        fill="var(--color-ink-500)"
+                        textAnchor={x > cxVal ? "start" : "end"}
+                        dominantBaseline="central"
+                        className="text-[10px] font-medium"
+                      >
+                        {name} ({value})
+                      </text>
+                    );
+                  }}
+                  labelLine={{ stroke: "var(--color-border)", strokeWidth: 1 }}
+                >
                   {sectorData.map((entry, i) => (
                     <Cell key={entry.name} fill={SECTOR_COLORS[i % SECTOR_COLORS.length]} />
                   ))}

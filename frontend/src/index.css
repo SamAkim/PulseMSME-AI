@@ -6,6 +6,38 @@
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, monospace;
 
+  /* Default Light Mode Theme Colors */
+  --color-ink-950: #0b1220;
+  --color-ink-900: #101828;
+  --color-ink-800: #1c2937;
+  --color-ink-700: #2b3a4a;
+  --color-ink-500: #5b6472;
+  --color-ink-300: #9aa4b2;
+
+  --color-surface: #f5f6f8;
+  --color-surface-raised: #ffffff;
+  --color-surface-sunken: #eceef2;
+  --color-border: #dde1e7;
+
+  --color-brand-900: #0c352f;
+  --color-brand-700: #146356;
+  --color-brand-600: #197d6c;
+  --color-brand-500: #1f9683;
+  --color-brand-100: #dcf1ec;
+
+  --color-band-excellent: #146356;
+  --color-band-excellent-bg: #e0f2ee;
+  --color-band-good: #2b7a5b;
+  --color-band-good-bg: #e3f3ea;
+  --color-band-average: #9a7b0a;
+  --color-band-average-bg: #faf3d9;
+  --color-band-bad: #b5641f;
+  --color-band-bad-bg: #fbe9dc;
+  --color-band-highrisk: #a4342a;
+  --color-band-highrisk-bg: #f8e2df;
+}
+
+:root.dark {
   --color-ink-950: #050505;
   --color-ink-900: #fafafa;
   --color-ink-800: #f4f4f5;
@@ -42,6 +74,11 @@
 
 html {
   font-family: var(--font-sans);
+  color-scheme: light;
+  transition: background-color 0.3s ease;
+}
+
+html.dark {
   color-scheme: dark;
 }
 
@@ -49,6 +86,7 @@ body {
   margin: 0;
   background: var(--color-surface);
   color: var(--color-ink-900);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #root {
@@ -97,24 +135,29 @@ body {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #09090b;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: var(--color-border);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: var(--color-ink-500);
 }
 
 /* CRED Card Hover Effect */
 .cred-card-hover {
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: var(--color-surface-raised);
 }
 .cred-card-hover:hover {
-  border-color: rgba(204, 163, 67, 0.3) !important;
-  box-shadow: 0 0 20px rgba(204, 163, 67, 0.05), inset 0 0 12px rgba(255, 255, 255, 0.02);
+  border-color: var(--color-brand-500) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), inset 0 0 12px rgba(255, 255, 255, 0.01);
   transform: translateY(-2px);
+}
+
+:root.dark .cred-card-hover:hover {
+  box-shadow: 0 0 20px rgba(204, 163, 67, 0.05), inset 0 0 12px rgba(255, 255, 255, 0.02);
 }
 
 @media print {
@@ -122,7 +165,9 @@ body {
     display: none !important;
   }
   body {
-    background: black;
+    background: transparent;
+    color: black;
   }
 }
+
 
