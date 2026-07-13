@@ -1,0 +1,21 @@
+msme_id,business_name,sector,city,state,archetype,business_age_years,legal_structure,udyam_registered,employee_count,credit_history_available,primary_sales_channel
+MSME001,Sri Lakshmi Textiles,Textile Retail,Coimbatore,Tamil Nadu,credit_invisible,3.0,Sole Proprietorship,True,6,False,Online + In-store
+MSME002,Deccan Precision Engineering,Small Manufacturing,Vijayawada,Andhra Pradesh,cash_flow_volatile,6.0,Private Limited,True,12,True,B2B Direct
+MSME003,Nagpur Grain & Provisions,Grocery,Nagpur,Maharashtra,digitally_weak,7.0,Partnership,True,5,True,Offline Retail
+MSME004,Rajkot Auto Spares & Repairs,Repair Services,Rajkot,Gujarat,high_risk,4.0,Sole Proprietorship,False,3,False,Offline Retail
+MSME005,Madurai Silk & Sarees Emporium,Textile Retail,Madurai,Tamil Nadu,seasonal,8.0,Partnership,True,10,True,Online + In-store
+MSME006,Surat Diamond Trading Co.,E-commerce Seller,Surat,Gujarat,standard,2.8,Private Limited,False,3,False,Online + In-store
+MSME007,Indore Spice & Provisions,Grocery,Indore,Madhya Pradesh,standard,3.7,LLP,False,5,False,B2B Direct
+MSME008,Bhopal City Pharmacy,Pharmacy,Bhopal,Madhya Pradesh,standard,4.3,Sole Proprietorship,False,6,False,Marketplace + Retail
+MSME009,Nashik Vineyard Foods Processing,Food Processing,Nashik,Maharashtra,standard,5.0,Partnership,True,7,False,Wholesale + Retail
+MSME010,Kochi Backwater Logistics,Logistics,Kochi,Kerala,standard,6.0,Private Limited,True,9,True,Offline Retail
+MSME011,Guwahati Tea Traders,E-commerce Seller,Guwahati,Assam,standard,6.5,LLP,True,10,True,Online + In-store
+MSME012,Patna Sadar Electronics Repairs,Repair Services,Patna,Bihar,standard,7.4,Sole Proprietorship,True,11,True,B2B Direct
+MSME013,Ludhiana Hosiery Manufacturing,Small Manufacturing,Ludhiana,Punjab,standard,7.8,Partnership,True,12,True,Marketplace + Retail
+MSME014,Vadodara Green Grocers,Grocery,Vadodara,Gujarat,standard,8.2,Private Limited,True,13,True,Wholesale + Retail
+MSME015,Amritsar Dhaba & Catering,Restaurant,Amritsar,Punjab,standard,9.3,LLP,True,15,True,Offline Retail
+MSME016,Mysore Sandal Handicrafts,Local Professional Services,Mysore,Karnataka,standard,9.8,Sole Proprietorship,True,16,True,Online + In-store
+MSME017,Chandigarh Legal & Tax Associates,Local Professional Services,Chandigarh,Chandigarh,standard,9.7,Partnership,True,17,True,B2B Direct
+MSME018,Visakhapatnam Seafood Exports,Food Processing,Visakhapatnam,Andhra Pradesh,standard,11.2,Private Limited,True,17,True,Marketplace + Retail
+MSME019,Jaipur Blue Pottery Retail,Textile Retail,Jaipur,Rajasthan,standard,11.0,LLP,True,18,True,Wholesale + Retail
+MSME020,Lucknow Chikankari Boutique,Textile Retail,Lucknow,Uttar Pradesh,standard,11.3,Sole Proprietorship,True,18,True,Offline Retail
